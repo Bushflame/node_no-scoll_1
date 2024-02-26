@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        style 
+            include ../../public/css/index.css
+
+            //- include ../../public/css/banner-grid.css
+            //- include ../../public/css/four-col-grid.css
+            //- include ../../public/css/listing.css
+            //- include ../../public/css/bookings.css
+            //- include ../../public/css/three-col.css
+        block head               
+    body.body
+
+        //- img.banner-bg-img(src="/img/sea-shore.jpg", alt="") 
+        .main-frame
+            include ../_includes/nav
+            //- img.bg-img(src=)
+            block content

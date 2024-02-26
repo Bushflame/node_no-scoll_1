@@ -1,0 +1,53 @@
+* 
+    box-sizing border-box
+    margin 0
+    padding 0
+
+@require './nav'
+@require './global-vars'
+@require './paginator'
+@require './sides'
+@require './pages'
+.body 
+    display flex
+    align-items center
+    justify-content center
+    min-height 100vh
+button 
+    border none
+    cursor pointer
+    outline none
+h1 
+    color #fff
+    font-size 3rem
+    text-align center
+    width fit-content
+//main app wrapper
+.main-frame 
+    background blue
+    display flex 
+    align-items center
+    flex-direction column
+    justify-content start
+    overflow hidden
+    //padding-top 80px
+    position relative
+    height var(--globalHeight) // 800px
+    width var(--globalWidth)
+//page container (book)
+.container 
+    display grid
+    grid-template-columns 1fr
+    grid-template-rows 1fr
+    height 100%
+    position relative
+    width 100%
+    z-index 0
+
+
+
+
+
+    
+
+ 

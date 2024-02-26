@@ -1,0 +1,42 @@
+.paginator-wrap 
+
+    grid-column 1 / 1 
+    grid-row 1 / 1
+    align-self end
+    order 4
+    height fit-content
+    margin  0 auto 1rem
+    width fit-content 
+    z-index 1
+
+.paginator 
+    display flex 
+    align-items center
+    justify-content center
+    gap 1rem
+
+    .btn-bg 
+        background red
+        border-radius 50%
+        height 2rem
+        position relative
+        width 2rem
+    .bg-btn 
+        background green
+    button 
+        background transparent
+        border none
+        border-radius 50%
+        display flex
+        align-items center
+        justify-content center
+        height 2rem
+        outline none
+        position absolute
+        width 2rem
+        z-index 400
+// active / inactive button colours        
+.bg-red 
+    background red
+.bg-green
+    background green

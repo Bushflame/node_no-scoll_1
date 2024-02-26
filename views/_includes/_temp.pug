@@ -1,0 +1,25 @@
+extends layouts/main_layout
+block append head
+    //- style 
+    //-     include ../public/css/index.css
+        //- include ../public/css/four-col.css
+block content
+    .container
+        .paginator-wrap
+            include ./_includes/paginator
+        section.page.page-1#page-1
+            .side.side-1#front-1
+                button.toggle-side(onclick='show_side("page-1")')  &#8250;
+                h1 Page 1 front
+            .side.side-2#back-1
+                button.increment.toggle-side(onclick='hide_side("page-1")') &#8249;
+                h1 page 1 back  
+        section.page.page-2#page-2
+            .side.front#front-2
+                button.toggle-side(onclick='show_side("page-2")') &#8250;
+                h1 Page 2 front
+            .side.back#back-2
+                button.toggle-side(onclick='hide_side("page-2")') &#8249;
+                h1 page 2 back  
+    script 
+        include ../js/scripts.js

@@ -1,0 +1,30 @@
+//- .paginator 
+//-     button.pager#btn-1(onclick='paginate("pages-1")') 1
+//-     button.pager#btn-2(onclick='paginate("pages-2")') 2
+//-     button.pager#btn-3(onclick='paginate("pages-3")') 3
+//-     button.pager#btn-4(onclick='paginate("pages-4")') 4
+
+//- .paginator 
+//-     .btn-bg#btn-bg-1(onclick='btnBg(btn-bg-1)')
+//-         button.pager#btn-1(onclick='getPage("pages-1")' value='1') 1
+//-     .btn-bg#btn-bg-2(onclick='btnBg(btn-bg-2)')
+//-         button.pager#btn-2(onclick='getPage("pages-2")' value='2') 2
+//-     .btn-bg#btn-bg-3(onclick='btnBg(btn-bg-3)')
+//-         button.pager#btn-3(onclick='getPage("pages-3")' value='3') 3
+//-     .btn-bg#btn-bg-4(onclick='btnBg(btn-bg-4)')      
+//-         button.pager#btn-4(onclick='getPage("pages-4")' value='4') 4
+
+
+//- each button sends 2 args to the script
+//- one to load the correct page (see logic for more details)
+//- one to change the active btnn background colour
+.paginator 
+    .btn-bg#btn-bg-1
+        button.pager#btn-1(onclick='getPage("pages-1","btn-bg-1")' value='1') 1
+    .btn-bg#btn-bg-2
+        button.pager#btn-2(onclick='getPage("pages-2","btn-bg-2")' value='2') 2
+    .btn-bg#btn-bg-3
+        button.pager#btn-3(onclick='getPage("pages-3","btn-bg-3")' value='3') 3
+    .btn-bg#btn-bg-4  
+        button.pager#btn-4(onclick='getPage("pages-4","btn-bg-4")' value='4') 4
+

@@ -1,0 +1,109 @@
+* 
+    box-sizing border-box
+    margin 0
+    padding 0
+
+@require './nav'
+@require './global-vars'
+@require './paginator'
+.body 
+    display flex
+    align-items center
+    justify-content center
+    min-height 100vh
+button 
+    border none
+    cursor pointer
+    outline none
+h1 
+    color #fff
+    font-size 3rem
+    //margin auto
+    text-align center
+    width fit-content
+.main-frame 
+    background blue
+    display flex 
+    align-items center
+    flex-direction column
+    justify-content start
+    overflow hidden
+    //padding-top 80px
+    position relative
+    height var(--globalHeight) // 800px
+    width var(--globalWidth)
+
+.container 
+    display grid
+    grid-template-columns 1fr
+    grid-template-rows 1fr
+    height 100%
+    width 100%
+.paginator-wrap 
+    background red
+    grid-column 1 / 1 
+    grid-row 1 / 1
+    align-self end
+    order 4
+    height fit-content
+    margin  0 auto 1rem
+    position relative
+    width fit-content 
+// put the following in own styl---------------------------------
+.toggle-side
+    background skyblue
+    border-radius 50%
+    color #fff
+    display flex 
+    align-items center
+    justify-content center
+    font-size 2.5rem
+    font-weight 800
+    height 2rem
+    padding-bottom 5px
+    position absolute
+    right 6px
+    top 50%
+    transform translate(0, -50%)
+    width 2rem
+    z-index 100
+
+.page
+    display grid
+    grid-column 1 / 1
+    grid-row 1 / 1
+    grid-template-columns 1fr
+    grid-template-rows 1fr
+    height 100%
+    order 0
+    position relative
+    width 100%    
+.page-1 
+    order 1
+.show-page
+    order 2
+.side
+    display flex 
+    flex-direction column
+    align-items center
+    justify-content center
+    grid-column 1 / 2
+    grid-row 1 / 2
+    height 100%
+    opacity 0
+    position relative
+    top 0
+    transform rotateY(-180deg)
+    //transform scale(.1)
+    transition all .5s
+    width 100%
+.front
+    background orange
+    //order 1
+.back 
+    background purple
+.show-side 
+    opacity 1
+    order 2
+    transform rotateY(-360deg)
+    //transform scale(1)
