@@ -1,11 +1,27 @@
 //SHOW / HIDE NAV ON BTN CLICK
 function showNav() {
+
     let getNav = document.getElementById('navwrap')
+    //on close page(sides are appearing instantly.
+    // hide when nav open and show with transition
+    let page = document.querySelectorAll('.page')
+    for (let i = 0; i < page.length; i++){
+        page[i].classList.add('nav-opening')
+    }
     getNav.classList.add('show-nav')
+
 }
 function hideNav() {
+
+
     let getNav = document.getElementById('navwrap') 
+    let page = document.querySelectorAll('.page')
+    //on close page(sides are appearing instantly.
+    // hide when nav open and show with transition
     getNav.classList.remove('show-nav')
+    for (let i = 0; i < page.length; i++){
+        page[i].classList.remove('nav-opening')
+    }
 }
 
  //on page load page 4 is loading - force page 1 to load
@@ -165,7 +181,7 @@ function getPage(e,btn) {
 // using seperate function from page getter to avoid entanglement
 function btnBg(e) {
     // get all btns
-    let btns = document.querySelectorAll('.btn-bg')  
+    let btns = document.querySelectorAll('.btn-box')  
     
     document.addEventListener('click', run());
     function run() {
@@ -174,11 +190,11 @@ function btnBg(e) {
             if (e == btns[i].id) {
                 console.log('btns e', btns[i].id)     
                 let activeBtn = document.getElementById(e)
-                activeBtn.classList.add('bg-btn')
+                activeBtn.classList.add('active-btn-box')
             //ensure button bg color is removed when button inactive
             } else {
             let inactive = document.getElementById(btns[i].id)
-            inactive.classList.remove('bg-btn')
+            inactive.classList.remove('active-btn-box')
         }
         }
     }

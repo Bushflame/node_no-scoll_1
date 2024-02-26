@@ -1,8 +1,9 @@
 .side
-    display flex 
-    flex-direction column
+    display grid 
+    grid-template-columns 1fr
     align-items center
-    justify-content center
+    grid-template-rows 1fr
+    justify-content right //center
     grid-column 1 / 2
     grid-row 1 / 2
     height 100%
@@ -12,8 +13,16 @@
     transform rotateY(-180deg)
     transition all .5s
     width 100%
+.side-content 
+    align-self start
+    display flex 
+    align-items center
+    flex-direction column
+    grid-column 1 / 2
+    grid-row 1 / 2
+    height 100%
+    padding-top 3rem
 .toggle-side
-    background skyblue
     border-radius 50%
     color #fff
     display flex 
@@ -21,19 +30,24 @@
     justify-content center
     font-size 2.5rem
     font-weight 800
+    grid-column 1 / 2
+    grid-row 1 / 2
     height 2rem
+    margin-left auto
+    margin-right 8px
     padding-bottom 5px
-    position absolute
-    right 6px
-    top 50%
-    transform translate(0, -50%)
+    //position absolute
+    //right 6px
+    //top 50%
+    //transform translate(0, -50%)
     width 2rem
-    z-index 100
+    z-index 1
 .front
-    background orange
-    //order 1
+    // background rgba(0,0,0,.2)
+    background var(--beta)
 .back 
-    background purple
+    background rgba(0,0,0,.2)
+    background var(--alpha)
 .show-side 
     opacity 1
     order 2

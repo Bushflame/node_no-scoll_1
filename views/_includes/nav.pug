@@ -1,22 +1,14 @@
 
-button.burger(onclick='showNav()') 
 
+//- open nav btn is located on the main_layout
 .navwrap#navwrap 
-    button.close-burger(onclick='hideNav()')
+    button.burger.close-burger.nav-btn(onclick='hideNav()')
     nav 
         ul 
             li
                 a(href='/') Home
             li 
                 a(href='/about') About
-  
-    //- script(type='text/javascript', src='/js/scripts.js')
     script 
         include ../../js/scripts.js
-    
-//- script. 
-//-     function toggleNav(){
-//-         alert('toggling')
-//-         showNav=false
-//-         console.log('toggling',)
-//-     }
+        

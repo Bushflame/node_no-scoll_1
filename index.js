@@ -26,6 +26,7 @@ database.once('connected', () => {
 app.set('view engine', 'pug')
 app.use(express.json());
 app.set('views', path.join(__dirname, './views'));
+app.use(express.static('public'))
 // ROUTES-----------------------------------------------
 // positioning is important - why???
 app.get('/', (req, res) => {
@@ -33,9 +34,13 @@ app.get('/', (req, res) => {
     //res.send('Hello world')
 })
 
-
-const routes = require('./routes/routes');
+app.get('/about', (req, res) => {
+    res.render('about')
+})
+const routes = require('./routes/crudRoutes');
 app.use('/api', routes)
+//const staticRoutes = require('./routes/staticRoutes')
+//app.use(staticRoutes)
 
 //SERVER SET UP------------------------
 const PORT = 3000

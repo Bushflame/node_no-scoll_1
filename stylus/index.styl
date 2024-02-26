@@ -9,31 +9,62 @@
 @require './sides'
 @require './pages'
 .body 
-    display flex
+    display grid
     align-items center
+    grid-template-columns 1fr
+    grid-template-rows 1fr
     justify-content center
-    min-height 100vh
+    //overflow hidden
+    position relative
+    height 100vh
+.main-bg-img
+    height 100%
+    grid-column 1 / 2
+    grid-row 1 / 2
+    //position absolute 
+    // left 0
+    // top 0
+    width 100%
+    z-index -1
+ img 
+    object-fit cover   
 button 
     border none
     cursor pointer
     outline none
-h1 
+.nav-btn 
+    background var(--theta)
     color #fff
+h1 
+    background var(--alpha-2)
+    border-radius 2rem
+    color var(--delta)
     font-size 3rem
+    padding 10px
     text-align center
     width fit-content
-//main app wrapper
+//wrapper for main-frame to enable positioning of nav open button without having to use position absolute
+// all nested elements are sized relative to this
+.site-wrap-grid 
+    display grid
+    grid-template-columns 1fr
+    grid-template-rows 1fr
+    height var(--globalHeight)
+    margin auto
+    width var(--globalWidth)
 .main-frame 
-    background blue
     display flex 
     align-items center
     flex-direction column
     justify-content start
+    grid-column 1 / 2
+    grid-row 1 / 2
+    margin auto
     overflow hidden
-    //padding-top 80px
     position relative
-    height var(--globalHeight) // 800px
-    width var(--globalWidth)
+    height 100%
+    width 100%
+    z-index 2
 //page container (book)
 .container 
     display grid

@@ -14,9 +14,11 @@ html(lang="en")
             //- include ../../public/css/three-col.css
         block head               
     body.body
-
-        //- img.banner-bg-img(src="/img/sea-shore.jpg", alt="") 
-        .main-frame
+        //img.main-bg-img(src='imgs/waterdroplet.jpg')
+        .site-wrap-grid
             include ../_includes/nav
-            //- img.bg-img(src=)
-            block content
+            .main-frame
+                //- put nav open here
+                //- put block wrap here - set mainframe to grid
+                block content
+            button.burger.open-nav.nav-btn(onclick='showNav()') 

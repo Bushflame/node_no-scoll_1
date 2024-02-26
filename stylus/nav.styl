@@ -1,66 +1,72 @@
+
 .burger 
-    background #fff
+    //background #fff
     border none
     border-radius 50%
     cursor pointer
+    grid-column 1 / 2
+    grid-row 1 / 2
     height 2rem
-    position absolute 
-    right 6px
-    top 6px
+    //position absolute 
+    //right 6px
+    //top 6px
     outline none
     width 2rem
     z-index 2
+//option 1 for open nav btn -- unstable
+.open-nav 
+    grid-column 1 / 2
+    grid-row 1 / 2
+    margin-left auto
+    margin-right 8px
+    margin-top 8px
+    //margin-top 2rem
 .close-burger
-    background #fff
-    border none
-    border-radius 50%
-    cursor pointer
-    height 2rem
-    position absolute 
-    right 1rem
-    top 1rem
-    outline none
-    width 2rem
+    //border none
+    //background red
+    //height 2rem
+    margin-left calc(var(--globalWidth) - 40px)
+    margin-right 8px
+    margin-top 8px
+    //position absolute 
+    //right 6px
+    //top 6px
+    //outline none
+    //width 2rem
     //z-index 2   
 .navwrap 
-    background green
-    //display none
-    height 100% //var(--globalHeight)
-    //margin-left -440px
-    //margin-top -100vh
-    //overflow hidden
-    padding 4rem 1rem
-    position absolute 
-    left 0 
-    top 0
-    transform scale(.2)
+    background var(--gamma)
+    height 100%
+    grid-column 1 / 2
+    grid-row 1 / 2
+    //padding 4rem 1rem
+    //position absolute 
+    //left 0 
+    //top 0
+    transform scale(0)
     transition all .5s
-
     width 100%
-    z-index -2
+    //z-index -2
 .show-nav.navwrap
-    //margin-left 0
-    //margin-top 0
-    //transform rotate(360deg)
     transform scale(1)
+    position relative
+    transition all .5s
     z-index 4
 nav 
-    background red 
-
     height 100% 
     width 100%
 
 ul 
     display flex
     flex-direction column
-    gap 10px
-
+    gap 5px
     list-style none
     width 100%
-li 
-    background orange
 a 
-    background purple
+    border-bottom 1px solid var(--alpha)
+    color var(--theta)
     display block
-    padding 10px 0
+    font-size 1.2rem
+    padding 6px 0
+    text-decoration none
     width 100%
