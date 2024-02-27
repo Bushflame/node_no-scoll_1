@@ -8,41 +8,9 @@ block content
     .container
         .paginator-wrap
             include ./_includes/paginator
-        section.page.page-1#pages-1
-            .side.front#front-1
-                button.toggle-side.nav-btn(onclick='show_side("page-1")')  &#8250;
-                .side-content
-                    h1 Page 1 front
-            .side.back#back-1
-                button.toggle-side.nav-btn(onclick='hide_side("page-1")') &#8249;
-                .side-content
-                    h1 page 1 back  
-        section.page.page-2#pages-2
-            .side.front#front-2
-                button.toggle-side.nav-btn(onclick='show_side("page-2")') &#8250;
-                .side-content
-                    h1 Page 2 front
-            .side.back#back-2
-                button.toggle-side.nav-btn(onclick='hide_side("page-2")') &#8249;
-                .side-content
-                    h1 page 2 back  
-        section.page.page-3#pages-3
-            .side.front#front-3
-                button.toggle-side.nav-btn(onclick='show_side("page-3")') &#8250;
-                .side-content
-                    h1 Page 3 front
-            .side.back#back-3
-                button.toggle-side.nav-btn(onclick='hide_side("page-3")') &#8249;
-                .side-content                
-                    h1 page 3 back  
-        section.page.page-4#pages-4
-            .side.front#front-4
-                button.toggle-side.nav-btn(onclick='show_side("page-4")') &#8250;
-                .side-content
-                    h1 Page 4 front
-            .side.back#back-4
-                button.toggle-side.nav-btn(onclick='hide_side("page-4")') &#8249;
-                .side-content
-                    h1 page 4 back  
+        include ./_includes/page_sections/section_1
+        include ./_includes/page_sections/section_2
+        include ./_includes/page_sections/section_3
+        include ./_includes/page_sections/section_4
     script 
         include ../js/scripts.js

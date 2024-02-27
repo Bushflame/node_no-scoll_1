@@ -36,7 +36,7 @@
     //z-index 2   
 .navwrap 
     background var(--gamma)
-    height 100%
+    width   100%
     grid-column 1 / 2
     grid-row 1 / 2
     //padding 4rem 1rem
@@ -45,7 +45,7 @@
     //top 0
     transform scale(0)
     transition all .5s
-    width 100%
+    width   100%
     //z-index -2
 .show-nav.navwrap
     transform scale(1)
@@ -54,6 +54,7 @@
     z-index 4
 nav 
     height 100% 
+    padding 2rem 1rem
     width 100%
 
 ul 
@@ -70,3 +71,12 @@ a
     padding 6px 0
     text-decoration none
     width 100%
+@media(min-width 880px)
+    .navwrap 
+        margin-left auto
+    nav 
+        margin-left auto
+        width 50%
+
+
+

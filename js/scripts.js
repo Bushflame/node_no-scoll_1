@@ -112,39 +112,39 @@ var pages_4 = document.getElementById('pages-4')
 // get btns ready to change bg colour when active
 var btn_1 = document.getElementById('btn-1')
 
-function paginate(e) {
-    switch (e) {
-        case 'pages-1':
-            pages_1.classList.add('show-pages')
-            pages_2.classList.remove('show-pages')
-            pages_3.classList.remove('show-pages')
-            pages_4.classList.remove('show-pages')
-            console.log('in page 1',)
-            break
-        case 'pages-2':
-            pages_1.classList.remove('show-pages')
-            pages_2.classList.add('show-pages')
-            pages_3.classList.remove('show-pages')
-            pages_4.classList.remove('show-pages')
-            console.log('in page 2',)
-            break
-        case 'pages-3':
-            pages_1.classList.remove('show-pages')
-            pages_2.classList.remove('show-pages')
-            pages_3.classList.add('show-pages')
-            pages_4.classList.remove('show-pages')
-            console.log('in page 3',)
-            break
-        case 'pages-4':
-            pages_2.classList.remove('show-pages')
-            pages_1.classList.remove('show-pages')
-            pages_3.classList.remove('show-pages')
-            pages_4.classList.add('show-pages')
-            console.log('in page 4',)
-            break
+// function paginate(e) {
+//     switch (e) {
+//         case 'pages-1':
+//             pages_1.classList.add('show-pages')
+//             pages_2.classList.remove('show-pages')
+//             pages_3.classList.remove('show-pages')
+//             pages_4.classList.remove('show-pages')
+//             console.log('in page 1',)
+//             break
+//         case 'pages-2':
+//             pages_1.classList.remove('show-pages')
+//             pages_2.classList.add('show-pages')
+//             pages_3.classList.remove('show-pages')
+//             pages_4.classList.remove('show-pages')
+//             console.log('in page 2',)
+//             break
+//         case 'pages-3':
+//             pages_1.classList.remove('show-pages')
+//             pages_2.classList.remove('show-pages')
+//             pages_3.classList.add('show-pages')
+//             pages_4.classList.remove('show-pages')
+//             console.log('in page 3',)
+//             break
+//         case 'pages-4':
+//             pages_2.classList.remove('show-pages')
+//             pages_1.classList.remove('show-pages')
+//             pages_3.classList.remove('show-pages')
+//             pages_4.classList.add('show-pages')
+//             console.log('in page 4',)
+//             break
             
-    }  
-}
+//     }  
+// }
 // PAGINATOR -------------------------------------------------
 // on paginator btn click two functions are triggered
 // arg 1 (e) gets the requested page and triggers the getPage function...
